@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF6173E8286C698800EEA3DB /* FYP_Mobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D5286C698600EEA3DB /* FYP_Mobile.xcdatamodeld */; };
+		DF6173E9286C698800EEA3DB /* FYP_Mobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D5286C698600EEA3DB /* FYP_Mobile.xcdatamodeld */; };
+		DF6173EA286C698800EEA3DB /* FYP_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D7286C698600EEA3DB /* FYP_MobileApp.swift */; };
+		DF6173EB286C698800EEA3DB /* FYP_MobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D7286C698600EEA3DB /* FYP_MobileApp.swift */; };
+		DF6173EC286C698800EEA3DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D8286C698600EEA3DB /* ContentView.swift */; };
+		DF6173ED286C698800EEA3DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D8286C698600EEA3DB /* ContentView.swift */; };
+		DF6173EE286C698800EEA3DB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D9286C698600EEA3DB /* Persistence.swift */; };
+		DF6173EF286C698800EEA3DB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173D9286C698600EEA3DB /* Persistence.swift */; };
+		DF6173F0286C698800EEA3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6173DA286C698800EEA3DB /* Assets.xcassets */; };
+		DF6173F1286C698800EEA3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6173DA286C698800EEA3DB /* Assets.xcassets */; };
+		DF6173FC286C69F400EEA3DB /* FarmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173FB286C69F400EEA3DB /* FarmerView.swift */; };
+		DF6173FE286C6A8F00EEA3DB /* OfficerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173FD286C6A8F00EEA3DB /* OfficerView.swift */; };
+		DF617402286C6B4400EEA3DB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617401286C6B4400EEA3DB /* LoginView.swift */; };
+		DF617404286C6C0C00EEA3DB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617403286C6C0C00EEA3DB /* SignUpView.swift */; };
+		DF617406286C6C8F00EEA3DB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617405286C6C8F00EEA3DB /* HomeView.swift */; };
+		DF617409286C724500EEA3DB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DF617408286C724500EEA3DB /* FirebaseAuth */; };
+		DF61740B286C724500EEA3DB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DF61740A286C724500EEA3DB /* FirebaseFirestore */; };
+		DF61740D286C724500EEA3DB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DF61740C286C724500EEA3DB /* FirebaseStorage */; };
+		DF61740F286C735800EEA3DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF61740E286C735800EEA3DB /* GoogleService-Info.plist */; };
+		DF617412286D4CF200EEA3DB /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = DF617411286D4CF200EEA3DB /* CodeScanner */; };
+		DF61741D286D548000EEA3DB /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61741C286D548000EEA3DB /* QRScanner.swift */; };
+		DF617420286D5AF000EEA3DB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61741F286D5AF000EEA3DB /* DetailView.swift */; };
+		DF617424286D8E2500EEA3DB /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617423286D8E2500EEA3DB /* DetailModel.swift */; };
+		DF617429286DB9AD00EEA3DB /* postDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617428286DB9AD00EEA3DB /* postDetails.swift */; };
+		DF61742B286DC48900EEA3DB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61742A286DC48900EEA3DB /* Network.swift */; };
+		DF61743128715F0100EEA3DB /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61743028715F0100EEA3DB /* DropdownSelector.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF6173D6286C698600EEA3DB /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		DF6173D7286C698600EEA3DB /* FYP_MobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FYP_MobileApp.swift; sourceTree = "<group>"; };
+		DF6173D8286C698600EEA3DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF6173D9286C698600EEA3DB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		DF6173DA286C698800EEA3DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF6173DF286C698800EEA3DB /* AgrO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgrO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF6173E5286C698800EEA3DB /* FYP_Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYP_Mobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF6173E7286C698800EEA3DB /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		DF6173FB286C69F400EEA3DB /* FarmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerView.swift; sourceTree = "<group>"; };
+		DF6173FD286C6A8F00EEA3DB /* OfficerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficerView.swift; sourceTree = "<group>"; };
+		DF617401286C6B4400EEA3DB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DF617403286C6C0C00EEA3DB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DF617405286C6C8F00EEA3DB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DF61740E286C735800EEA3DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DF61741C286D548000EEA3DB /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
+		DF61741F286D5AF000EEA3DB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		DF617423286D8E2500EEA3DB /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		DF617428286DB9AD00EEA3DB /* postDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postDetails.swift; sourceTree = "<group>"; };
+		DF61742A286DC48900EEA3DB /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		DF61742D287150C000EEA3DB /* FYP-Mobile--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FYP-Mobile--iOS--Info.plist"; sourceTree = "<group>"; };
+		DF61743028715F0100EEA3DB /* DropdownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSelector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF6173DC286C698800EEA3DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF617412286D4CF200EEA3DB /* CodeScanner in Frameworks */,
+				DF617409286C724500EEA3DB /* FirebaseAuth in Frameworks */,
+				DF61740B286C724500EEA3DB /* FirebaseFirestore in Frameworks */,
+				DF61740D286C724500EEA3DB /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF6173E2286C698800EEA3DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF6173CF286C698600EEA3DB = {
+			isa = PBXGroup;
+			children = (
+				DF61742D287150C000EEA3DB /* FYP-Mobile--iOS--Info.plist */,
+				DF6173D4286C698600EEA3DB /* Shared */,
+				DF6173E6286C698800EEA3DB /* macOS */,
+				DF6173E0286C698800EEA3DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF6173D4286C698600EEA3DB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				DF61742C286DC52200EEA3DB /* Controller */,
+				DF61741E286D5AD000EEA3DB /* Model */,
+				DF6173FA286C69E000EEA3DB /* View */,
+				DF6173D7286C698600EEA3DB /* FYP_MobileApp.swift */,
+				DF6173D8286C698600EEA3DB /* ContentView.swift */,
+				DF6173D9286C698600EEA3DB /* Persistence.swift */,
+				DF6173DA286C698800EEA3DB /* Assets.xcassets */,
+				DF6173D5286C698600EEA3DB /* FYP_Mobile.xcdatamodeld */,
+				DF61740E286C735800EEA3DB /* GoogleService-Info.plist */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		DF6173E0286C698800EEA3DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF6173DF286C698800EEA3DB /* AgrO.app */,
+				DF6173E5286C698800EEA3DB /* FYP_Mobile.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF6173E6286C698800EEA3DB /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				DF6173E7286C698800EEA3DB /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		DF6173FA286C69E000EEA3DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF61741F286D5AF000EEA3DB /* DetailView.swift */,
+				DF6173FB286C69F400EEA3DB /* FarmerView.swift */,
+				DF6173FD286C6A8F00EEA3DB /* OfficerView.swift */,
+				DF617401286C6B4400EEA3DB /* LoginView.swift */,
+				DF617403286C6C0C00EEA3DB /* SignUpView.swift */,
+				DF617405286C6C8F00EEA3DB /* HomeView.swift */,
+				DF61741C286D548000EEA3DB /* QRScanner.swift */,
+				DF617428286DB9AD00EEA3DB /* postDetails.swift */,
+				DF61743028715F0100EEA3DB /* DropdownSelector.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DF61741E286D5AD000EEA3DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF617423286D8E2500EEA3DB /* DetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DF61742C286DC52200EEA3DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF61742A286DC48900EEA3DB /* Network.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF6173DE286C698800EEA3DB /* FYP_Mobile (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF6173F4286C698800EEA3DB /* Build configuration list for PBXNativeTarget "FYP_Mobile (iOS)" */;
+			buildPhases = (
+				DF6173DB286C698800EEA3DB /* Sources */,
+				DF6173DC286C698800EEA3DB /* Frameworks */,
+				DF6173DD286C698800EEA3DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FYP_Mobile (iOS)";
+			packageProductDependencies = (
+				DF617408286C724500EEA3DB /* FirebaseAuth */,
+				DF61740A286C724500EEA3DB /* FirebaseFirestore */,
+				DF61740C286C724500EEA3DB /* FirebaseStorage */,
+				DF617411286D4CF200EEA3DB /* CodeScanner */,
+			);
+			productName = "FYP_Mobile (iOS)";
+			productReference = DF6173DF286C698800EEA3DB /* AgrO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF6173E4286C698800EEA3DB /* FYP_Mobile (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF6173F7286C698800EEA3DB /* Build configuration list for PBXNativeTarget "FYP_Mobile (macOS)" */;
+			buildPhases = (
+				DF6173E1286C698800EEA3DB /* Sources */,
+				DF6173E2286C698800EEA3DB /* Frameworks */,
+				DF6173E3286C698800EEA3DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FYP_Mobile (macOS)";
+			productName = "FYP_Mobile (macOS)";
+			productReference = DF6173E5286C698800EEA3DB /* FYP_Mobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF6173D0286C698600EEA3DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					DF6173DE286C698800EEA3DB = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					DF6173E4286C698800EEA3DB = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = DF6173D3286C698600EEA3DB /* Build configuration list for PBXProject "FYP_Mobile" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF6173CF286C698600EEA3DB;
+			packageReferences = (
+				DF617407286C724500EEA3DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DF617410286D4CF200EEA3DB /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
+			productRefGroup = DF6173E0286C698800EEA3DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF6173DE286C698800EEA3DB /* FYP_Mobile (iOS) */,
+				DF6173E4286C698800EEA3DB /* FYP_Mobile (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF6173DD286C698800EEA3DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF6173F0286C698800EEA3DB /* Assets.xcassets in Resources */,
+				DF61740F286C735800EEA3DB /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF6173E3286C698800EEA3DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF6173F1286C698800EEA3DB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF6173DB286C698800EEA3DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF617424286D8E2500EEA3DB /* DetailModel.swift in Sources */,
+				DF61741D286D548000EEA3DB /* QRScanner.swift in Sources */,
+				DF617420286D5AF000EEA3DB /* DetailView.swift in Sources */,
+				DF617406286C6C8F00EEA3DB /* HomeView.swift in Sources */,
+				DF6173E8286C698800EEA3DB /* FYP_Mobile.xcdatamodeld in Sources */,
+				DF617429286DB9AD00EEA3DB /* postDetails.swift in Sources */,
+				DF617402286C6B4400EEA3DB /* LoginView.swift in Sources */,
+				DF6173EE286C698800EEA3DB /* Persistence.swift in Sources */,
+				DF6173EA286C698800EEA3DB /* FYP_MobileApp.swift in Sources */,
+				DF617404286C6C0C00EEA3DB /* SignUpView.swift in Sources */,
+				DF6173FC286C69F400EEA3DB /* FarmerView.swift in Sources */,
+				DF6173EC286C698800EEA3DB /* ContentView.swift in Sources */,
+				DF61742B286DC48900EEA3DB /* Network.swift in Sources */,
+				DF6173FE286C6A8F00EEA3DB /* OfficerView.swift in Sources */,
+				DF61743128715F0100EEA3DB /* DropdownSelector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF6173E1286C698800EEA3DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF6173E9286C698800EEA3DB /* FYP_Mobile.xcdatamodeld in Sources */,
+				DF6173EF286C698800EEA3DB /* Persistence.swift in Sources */,
+				DF6173EB286C698800EEA3DB /* FYP_MobileApp.swift in Sources */,
+				DF6173ED286C698800EEA3DB /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DF6173F2286C698800EEA3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF6173F3286C698800EEA3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DF6173F5286C698800EEA3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48689QGL3Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FYP-Mobile--iOS--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Randimal-Geeganage.FYP-Mobile";
+				PRODUCT_NAME = AgrO;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF6173F6286C698800EEA3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48689QGL3Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FYP-Mobile--iOS--Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(PRODUCT_NAME) camera use";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Randimal-Geeganage.FYP-Mobile";
+				PRODUCT_NAME = AgrO;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF6173F8286C698800EEA3DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Randimal-Geeganage.FYP-Mobile";
+				PRODUCT_NAME = FYP_Mobile;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		DF6173F9286C698800EEA3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Randimal-Geeganage.FYP-Mobile";
+				PRODUCT_NAME = FYP_Mobile;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF6173D3286C698600EEA3DB /* Build configuration list for PBXProject "FYP_Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF6173F2286C698800EEA3DB /* Debug */,
+				DF6173F3286C698800EEA3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF6173F4286C698800EEA3DB /* Build configuration list for PBXNativeTarget "FYP_Mobile (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF6173F5286C698800EEA3DB /* Debug */,
+				DF6173F6286C698800EEA3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF6173F7286C698800EEA3DB /* Build configuration list for PBXNativeTarget "FYP_Mobile (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF6173F8286C698800EEA3DB /* Debug */,
+				DF6173F9286C698800EEA3DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF617407286C724500EEA3DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		DF617410286D4CF200EEA3DB /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF617408286C724500EEA3DB /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF617407286C724500EEA3DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DF61740A286C724500EEA3DB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF617407286C724500EEA3DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DF61740C286C724500EEA3DB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF617407286C724500EEA3DB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		DF617411286D4CF200EEA3DB /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF617410286D4CF200EEA3DB /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		DF6173D5286C698600EEA3DB /* FYP_Mobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF6173D6286C698600EEA3DB /* Shared.xcdatamodel */,
+			);
+			currentVersion = DF6173D6286C698600EEA3DB /* Shared.xcdatamodel */;
+			path = FYP_Mobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DF6173D0286C698600EEA3DB /* Project object */;
+}
