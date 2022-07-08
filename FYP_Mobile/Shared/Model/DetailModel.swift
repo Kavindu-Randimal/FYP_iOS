@@ -20,6 +20,10 @@ struct foodDetails : Identifiable ,Codable {
     let spec : String?
     let details : String?
     let certificationStatus : String?
+    let privateKey: String
+    let contractId: String
+    let gasLimit: Int64
+    let gasPrice: Int64
 }
 
 struct startDetails : Codable {
@@ -41,4 +45,19 @@ struct TransactionReceipt: Codable {
     let revertReason, type, effectiveGasPrice: String?
     let statusOK: Bool
     let blockNumberRaw, cumulativeGasUsedRaw, gasUsedRaw, transactionIndexRaw: String
+}
+
+struct User: Decodable {
+    let id: String
+    let name: String
+    let email: String
+    let about: String
+}
+
+
+struct SignUpModel : Codable {
+    let userName : String
+    let userEmail : String
+    let userRole : String
+    let password : String
 }

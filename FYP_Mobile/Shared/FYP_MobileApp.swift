@@ -11,16 +11,23 @@ import SwiftUI
 struct FYP_MobileApp: App {
     
     var network = Network()
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-           FarmerView(eventId: 1, userId: 1)
-                .environmentObject(network)
+//           FarmerView()
+//                .environmentObjectiew((network)
 //            HomeView()
 //                .environmentObject(network)
             
 //            DropdownSelector()
+//            DetailView()
+            SignUp( isPresenting: false)
+                .environmentObject(network)
+//            
+//            Login(isPresenting: false)
+//                .environmentObject(network)
         }
     }
 }

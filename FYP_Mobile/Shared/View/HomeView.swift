@@ -13,50 +13,48 @@ struct HomeView: View {
     @EnvironmentObject var network : Network
     
     var body: some View {
-        VStack{
-            Text("AgrO")
-                .foregroundColor(Color("theme"))
-                .font(.system(size: 70))
-            Spacer()
-                .frame(height: 100)
-            Image("agropng")
-                .resizable()
-                .frame(width: 200, height: 200)
-            Spacer()
-                .frame(height: 100)
+        NavigationView{
             VStack{
-                Button(action: {
-                    network.getDetails()
-                }, label: {
-                    Text("+ Create")
-                        .frame(width: 170, height: 20)
-                        .padding()
-                        .background(Color("theme"))
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
-                })
-                Button(action: {
-//                    NavigationLink(<#LocalizedStringKey#>, destination: QRScanner)
-                }, label: {
-                    Text("Scan QR")
-                        .frame(width: 170, height: 20)
-                        .padding()
-                        .background(Color("theme"))
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
-                })
-                Button(action: {
-                    
-                }, label: {
-                    Text("View")
-                        .frame(width: 170, height: 20)
-                        .padding()
-                        .background(Color("theme"))
-                        .foregroundColor(Color.white)
-                        .cornerRadius(10)
-                })
+                Text("AgrO")
+                    .foregroundColor(Color("theme"))
+                    .font(.system(size: 70))
+                Spacer()
+                    .frame(height: 100)
+                Image("agropng")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                Spacer()
+                    .frame(height: 100)
+                VStack{
+                    NavigationLink(destination: FarmerView()){
+                        Text("+ Create")
+                            .frame(width: 170, height: 20)
+                            .padding()
+                            .background(Color("theme"))
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                    }
+                    NavigationLink(destination: DetailView()){
+                        Text("View Details")
+                            .frame(width: 170, height: 20)
+                            .padding()
+                            .background(Color("theme"))
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                    }
+                    NavigationLink(destination: QRScanner()){
+                        Text("Scan QR")
+                            .frame(width: 170, height: 20)
+                            .padding()
+                            .background(Color("theme"))
+                            .foregroundColor(Color.white)
+                            .cornerRadius(10)
+                    }
+                }
             }
+            .padding(.top, -150)
         }
+//        .padding(.top, -150)
     }
 }
 

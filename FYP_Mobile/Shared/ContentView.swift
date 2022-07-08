@@ -12,20 +12,7 @@ struct ContentView: View {
     
     
     var body: some View {
-        TabView {
-            FarmerView()
-                .tabItem {
-                    Label("Pizza List", systemImage: "list.dash")
-                }
-            QRScanner()
-                .tabItem {
-                    Label("Favourites", systemImage: "star.fill")
-                }
-            DetailView()
-                .tabItem {
-                    Label("Favourites", systemImage: "star.fill")
-                }
-        }
+        Text("hello")
     }
     
     struct ContentView_Previews: PreviewProvider {
