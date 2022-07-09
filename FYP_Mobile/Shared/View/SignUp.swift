@@ -13,8 +13,6 @@ struct SignUp: View {
     
     @State var isPresenting: Bool
     
-    //    @State var signUpModel : SignUpModel
-    
     @State var userName: String = ""
     @State var email: String = ""
     @State var role: String = ""
@@ -78,7 +76,7 @@ struct SignUp: View {
                                     if statuscode == 200 {
                                         // redirect to login page
                                         self.isPresenting = true
-                                        print("user authenticated successfully", success)
+                                        print("user authenticated successfully",success)
                                     } else {
                                         // login not successful
                                     }
@@ -104,7 +102,7 @@ struct SignUp: View {
                             .padding(.leading,34)
                     }
                 }
-                .padding(-10)
+//                .padding(-10)
             }
 //        }
     }

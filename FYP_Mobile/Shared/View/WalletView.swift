@@ -61,6 +61,42 @@ struct WalletView: View {
             
         }.edgesIgnoringSafeArea([.bottom])
     }
+    
+    func postPrivateKey(parameters : [String: Any], completion: @escaping(Bool, Int) -> ()) {
+        guard let url = URL(string: "")else {fatalError("Missing Url")}
+        
+        let data = try? JSONSerialization.data(withJSONObject: parameters)
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = data
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let dataTask = URLSession.shared.dataTask(with: request){ (data, response, error) in
+            if let error = error {
+                print("Request error: ", error)
+                completion(false, 500)
+                return
+            }
+            guard let response = response as? HTTPURLResponse else { return }
+            
+            if response.statusCode == 200 {
+                guard let data = data else {
+                    completion(false, 500)
+                    return
+                }
+                do {
+                    let decodedDetails = try JSONDecoder().decode(SignUpModel.self, from: data)
+                    print(decodedDetails)
+                    completion(false, response.statusCode)
+                } catch let error {
+                    print("Error decoding: ", error)
+                    completion(false, 500)
+                }
+            }
+        }
+        dataTask.resume()
+    }
 }
 
 struct WalletView_Previews: PreviewProvider {

@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct FarmerView: View{
+    @State var item: cultivationModel;
     
-    
-//    @Environment(\.presentationMode) var presentationMode
-//    
+    //    @Environment(\.presentationMode) var presentationMode
+    //
     ///drop down menu values
     @State private var userSelection = "Farmer"
     let userType = ["Farmer", "Officer"]
     
     ///dorp down menu values - state
     @State private var stageSelection = "Cultivation"
-    let stage = ["Cultivation", "Fertilization", "Harvesting", "Packaging"]
+    let stage = ["Cultivation", "Fertilization", "Harvesting", "Packaging", "Certification"]
     
     @EnvironmentObject var network : Network
     
@@ -30,12 +30,13 @@ struct FarmerView: View{
     //    @State var userType: Int?
     @State var foodName: String = ""
     //    @State var stage : Int?
-//    @State var date : String = ""
+    //    @State var date : String = ""
     @State var spec: String = ""
     @State var details: String = ""
     @State var certificateStatus: String = ""
     @State var currentDate = Date()
     
+    @State var isAlert = false
     
     var body: some View {
         NavigationView {
@@ -72,14 +73,6 @@ struct FarmerView: View{
                     }
                     .padding(5)
                     .listRowSeparator(.hidden)
-                    //                VStack{
-                    //                    Text("User Type")
-                    //                        .frame(maxWidth: .infinity, alignment: .leading)
-                    //                    TextField("", value: $userType,formatter: NumberFormatter())
-                    //                        .keyboardType(.numberPad)
-                    //                        .textFieldStyle(.roundedBorder)
-                    //                }
-                    //
                     VStack {
                         VStack{
                             Text("Selected user Type: \(userSelection)")
@@ -108,16 +101,6 @@ struct FarmerView: View{
                     }
                     .padding(5)
                     .listRowSeparator(.hidden)
-                    //                VStack{
-                    //                    Text("Stage")
-                    //                        .frame(maxWidth: .infinity, alignment: .leading)
-                    //                    TextField("", value: $stage,formatter: NumberFormatter())
-                    //                        .keyboardType(.numberPad)
-                    //                        .textFieldStyle(.roundedBorder)
-                    //                }
-                    //                .padding()
-                    //                .listRowSeparator(.hidden)
-                    
                     VStack {
                         
                         Text("Selected Stage: \(stageSelection)")
@@ -132,7 +115,6 @@ struct FarmerView: View{
                             }
                         }
                         .pickerStyle(.wheel)
-    //                    .defaultWheelPickerItemHeight(30)
                         .frame(width: 315, height: 100, alignment: .trailing)
                         .clipped()
                         
@@ -140,12 +122,9 @@ struct FarmerView: View{
                     .listRowSeparator(.hidden)
                     
                     VStack{
-                        
-//                        Text("Date")
                         DatePicker("Date", selection: $currentDate, displayedComponents: .date)
                                                     .colorInvert()
                                                     .colorMultiply(.black)
-//                                                    .frame(height: UIScreen.screenHeight * 0.18, alignment: .center)
                                                     .datePickerStyle(WheelDatePickerStyle())
                                                     .transformEffect(.init(scaleX: 0.9, y: 0.9))
                                                     .clipped()
@@ -160,7 +139,7 @@ struct FarmerView: View{
                     }
                     .padding(10)
                     .listRowSeparator(.hidden)
-                    
+//                    
                     VStack{
                         Text("Spec")
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -222,29 +201,53 @@ struct FarmerView: View{
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     VStack {
+                        Text("Agro")
+                            .foregroundColor(Color("theme"))
+                            .font(.system(size: 40))
+                        Spacer()
                         Text("Enter Food details") .font(.headline)
                     }
                 }
-                
-        }.edgesIgnoringSafeArea([.bottom])
+            }.edgesIgnoringSafeArea([.bottom])
         }
     }
     
     
     func saveFoodDetails(){
-        print(userSelection)
-        print(firstName)
-        print(lastName)
-        print(foodName)
-        print(currentDate)
-        print(spec)
-        print(details)
-        print(certificateStatus)
-        
+        let dateFormatter = DateFormatter()
+
+        if firstName != "" && lastName != "" && foodName != "" && currentDate != Date()  && spec != "" && details != "" && certificateStatus != ""{
+            let parameters: [String : Any] = ["firstName" : firstName,
+                                              "lastName" : lastName,
+                                              "foodName" : foodName,
+                                              "date" : dateFormatter.string(from: currentDate),
+                                              "spec" : spec,
+                                              "details" : details,
+                                              "userType" : 0,
+                                              "stage" : 1,
+                                              "certificationStatus" : certificateStatus,
+                                              "contractId": item.contractId,
+                                              "privateKey": UserStatus.userSatatus.privateKey,
+                                              "gasPrice": UserStatus.userSatatus.gasPrice,
+                                              "gasLimit": UserStatus.userSatatus.gasLimit
+            ]
+            
+            network.addEvent(parameters: parameters){(success, statuscode)in
+                if statuscode == 200 {
+                    print(parameters)
+                }
+                else {
+                    print("data adding failed")
+                }
+            }
+        }
+        else{
+           
+        }
     }
 }
-struct FarmerView_Previews: PreviewProvider {
-    static var previews: some View {
-        FarmerView()
-    }
-}
+//struct FarmerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FarmerView()
+//    }
+//}

@@ -10,16 +10,16 @@ import SwiftUI
 
 struct DetailView: View {
     
-    @State var users = [User]()
+    @State var _cultivationModel: [cultivationModel] = []
     
     var body: some View {
             List{
-                ForEach(users, id: \.id) { item in
+                ForEach( _cultivationModel, id: \.id) { item in
                     NavigationLink(destination: details(item: item)) {
                         HStack {
-                            Text(item.name)
+                            Text(item.contractName ?? "")
                                 .font(.headline)
-                            Text(item.email)
+                            Text(item.date ?? "")
                         }.padding(7)
                     }
                 }
@@ -29,7 +29,13 @@ struct DetailView: View {
     }
     
     func loadData() {
-        guard let url = URL(string: "https://dl.dropboxusercontent.com/s/1y7yqdefyayegzo/employeelist.json?dl=0") else {
+        var tmpUrl: String = "http://localhost:8080/api/contracts"
+        if ( UserStatus.userSatatus.role == "officer") {
+            tmpUrl += "/officer"
+        } else {
+            tmpUrl += "?farmerName=" + (UserStatus.userSatatus.name ?? "")
+        }
+        guard let url = URL(string: tmpUrl) else {
             fatalError("Missing URL")}
         
         let urlRequest = URLRequest(url: url)
@@ -45,8 +51,8 @@ struct DetailView: View {
                 guard let data  = data else { return}
                 DispatchQueue.main.async {
                     do{
-                        let decodeDetails = try JSONDecoder().decode([User].self, from: data)
-                        self.users = decodeDetails
+                        let decodeDetails = try JSONDecoder().decode([cultivationModel].self, from: data)
+                        self._cultivationModel = decodeDetails
                     } catch let error {
                         print("Error decoding", error)
                     }
@@ -64,23 +70,23 @@ struct DetailView: View {
     
     struct details: View {
         
-        let item: User
+        let item: cultivationModel
         
         var body: some View {
             
             VStack {
-                Text(item.name)
+                Text(item.contractName ?? "")
                     .font(.title)
-                Text(item.email)
+                Text(item.date ?? "")
                     .font(.subheadline)
                 Divider()
-                Text(item.about)
+                Text(item.farmerName ?? "")
                     .font(.headline)
                     .multilineTextAlignment(.center)
                     .lineLimit(50)
             }.padding()
             
-            NavigationLink(destination: FarmerView()){
+            NavigationLink(destination: FarmerView( item: item )){
                 Text("Update")
                     .frame(width: 60, height: 10)
                     .padding()

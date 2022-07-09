@@ -7,15 +7,14 @@
 
 import Foundation
 
-struct foodDetails : Identifiable ,Codable {
-    var id:Int {eventId}
+struct foodDetails :  Codable {
     let eventId: Int
     let userId : Int?
     let firstName : String
     let lastName : String?
-    let userType : Int?
+    let userType : String?
     let foodName : String?
-    let stage : Int?
+    let stage : String?
     let date : String?
     let spec : String?
     let details : String?
@@ -56,8 +55,29 @@ struct User: Decodable {
 
 
 struct SignUpModel : Codable {
+    
     let userName : String
     let userEmail : String
     let userRole : String
     let password : String
+    let privateKey: String
+}
+
+class UserStatus {
+    static let userSatatus = UserStatus()
+    
+    var name: String? = ""
+    var role: String? = "farmer"
+    var privateKey: String? = nil
+    var currentContractId: String? = nil
+    var gasPrice : Int? = 2000
+    var gasLimit : Int? = 6721975
+}
+
+struct cultivationModel : Codable{
+    let contractName : String?
+    let contractId: String?
+    let date : String?
+    let farmerName: String?
+    let id: Int
 }

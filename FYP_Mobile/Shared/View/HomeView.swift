@@ -26,7 +26,7 @@ struct HomeView: View {
                 Spacer()
                     .frame(height: 100)
                 VStack{
-                    NavigationLink(destination: FarmerView()){
+                    NavigationLink(destination: CreateView(cultivationName: "")){
                         Text("+ Create")
                             .frame(width: 170, height: 20)
                             .padding()

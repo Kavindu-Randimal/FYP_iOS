@@ -19,8 +19,6 @@
 		DF6173F1286C698800EEA3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF6173DA286C698800EEA3DB /* Assets.xcassets */; };
 		DF6173FC286C69F400EEA3DB /* FarmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173FB286C69F400EEA3DB /* FarmerView.swift */; };
 		DF6173FE286C6A8F00EEA3DB /* OfficerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6173FD286C6A8F00EEA3DB /* OfficerView.swift */; };
-		DF617402286C6B4400EEA3DB /* notallowed.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617401286C6B4400EEA3DB /* notallowed.swift */; };
-		DF617404286C6C0C00EEA3DB /* norallowed2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617403286C6C0C00EEA3DB /* norallowed2.swift */; };
 		DF617406286C6C8F00EEA3DB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617405286C6C8F00EEA3DB /* HomeView.swift */; };
 		DF617409286C724500EEA3DB /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DF617408286C724500EEA3DB /* FirebaseAuth */; };
 		DF61740B286C724500EEA3DB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DF61740A286C724500EEA3DB /* FirebaseFirestore */; };
@@ -30,12 +28,11 @@
 		DF61741D286D548000EEA3DB /* QRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61741C286D548000EEA3DB /* QRScanner.swift */; };
 		DF617420286D5AF000EEA3DB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61741F286D5AF000EEA3DB /* DetailView.swift */; };
 		DF617424286D8E2500EEA3DB /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617423286D8E2500EEA3DB /* DetailModel.swift */; };
-		DF617429286DB9AD00EEA3DB /* notallowed3.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF617428286DB9AD00EEA3DB /* notallowed3.swift */; };
 		DF61742B286DC48900EEA3DB /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF61742A286DC48900EEA3DB /* Network.swift */; };
 		DFA53BD22874C5D2008752AA /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA53BD12874C5D2008752AA /* SignUp.swift */; };
 		DFA53BD42874C76E008752AA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA53BD32874C76E008752AA /* Login.swift */; };
 		DFDEF22B287845E500176BDF /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEF22A287845E500176BDF /* WalletView.swift */; };
-		DFDEF27A2878A33D00176BDF /* chathura.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEF2792878A33D00176BDF /* chathura.swift */; };
+		DFDEF27E2879BD9000176BDF /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEF27D2879BD8F00176BDF /* CreateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,20 +46,17 @@
 		DF6173E7286C698800EEA3DB /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		DF6173FB286C69F400EEA3DB /* FarmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerView.swift; sourceTree = "<group>"; };
 		DF6173FD286C6A8F00EEA3DB /* OfficerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficerView.swift; sourceTree = "<group>"; };
-		DF617401286C6B4400EEA3DB /* notallowed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notallowed.swift; sourceTree = "<group>"; };
-		DF617403286C6C0C00EEA3DB /* norallowed2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = norallowed2.swift; sourceTree = "<group>"; };
 		DF617405286C6C8F00EEA3DB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DF61740E286C735800EEA3DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF61741C286D548000EEA3DB /* QRScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScanner.swift; sourceTree = "<group>"; };
 		DF61741F286D5AF000EEA3DB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DF617423286D8E2500EEA3DB /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
-		DF617428286DB9AD00EEA3DB /* notallowed3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notallowed3.swift; sourceTree = "<group>"; };
 		DF61742A286DC48900EEA3DB /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		DF61742D287150C000EEA3DB /* FYP-Mobile--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FYP-Mobile--iOS--Info.plist"; sourceTree = "<group>"; };
 		DFA53BD12874C5D2008752AA /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		DFA53BD32874C76E008752AA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		DFDEF22A287845E500176BDF /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
-		DFDEF2792878A33D00176BDF /* chathura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chathura.swift; sourceTree = "<group>"; };
+		DFDEF27D2879BD8F00176BDF /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,15 +130,12 @@
 				DF61741F286D5AF000EEA3DB /* DetailView.swift */,
 				DF6173FB286C69F400EEA3DB /* FarmerView.swift */,
 				DF6173FD286C6A8F00EEA3DB /* OfficerView.swift */,
-				DF617401286C6B4400EEA3DB /* notallowed.swift */,
-				DF617403286C6C0C00EEA3DB /* norallowed2.swift */,
 				DF617405286C6C8F00EEA3DB /* HomeView.swift */,
 				DF61741C286D548000EEA3DB /* QRScanner.swift */,
-				DF617428286DB9AD00EEA3DB /* notallowed3.swift */,
 				DFA53BD12874C5D2008752AA /* SignUp.swift */,
 				DFA53BD32874C76E008752AA /* Login.swift */,
 				DFDEF22A287845E500176BDF /* WalletView.swift */,
-				DFDEF2792878A33D00176BDF /* chathura.swift */,
+				DFDEF27D2879BD8F00176BDF /* CreateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,18 +269,15 @@
 				DF61741D286D548000EEA3DB /* QRScanner.swift in Sources */,
 				DF617420286D5AF000EEA3DB /* DetailView.swift in Sources */,
 				DF617406286C6C8F00EEA3DB /* HomeView.swift in Sources */,
+				DFDEF27E2879BD9000176BDF /* CreateView.swift in Sources */,
 				DFA53BD22874C5D2008752AA /* SignUp.swift in Sources */,
 				DF6173E8286C698800EEA3DB /* FYP_Mobile.xcdatamodeld in Sources */,
-				DF617429286DB9AD00EEA3DB /* notallowed3.swift in Sources */,
-				DF617402286C6B4400EEA3DB /* notallowed.swift in Sources */,
 				DF6173EE286C698800EEA3DB /* Persistence.swift in Sources */,
 				DF6173EA286C698800EEA3DB /* FYP_MobileApp.swift in Sources */,
-				DF617404286C6C0C00EEA3DB /* norallowed2.swift in Sources */,
 				DFDEF22B287845E500176BDF /* WalletView.swift in Sources */,
 				DF6173FC286C69F400EEA3DB /* FarmerView.swift in Sources */,
 				DF6173EC286C698800EEA3DB /* ContentView.swift in Sources */,
 				DF61742B286DC48900EEA3DB /* Network.swift in Sources */,
-				DFDEF27A2878A33D00176BDF /* chathura.swift in Sources */,
 				DF6173FE286C6A8F00EEA3DB /* OfficerView.swift in Sources */,
 				DFA53BD42874C76E008752AA /* Login.swift in Sources */,
 			);

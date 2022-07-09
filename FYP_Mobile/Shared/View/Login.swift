@@ -33,6 +33,7 @@ struct Login: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                         TextField("Enter email", text: $email)
                             .textFieldStyle(.roundedBorder)
+                            .autocapitalization(.none)
                     }
                     .padding(10)
                     .listRowSeparator(.hidden)
@@ -41,6 +42,7 @@ struct Login: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                         TextField("Enter Password", text: $password)
                             .textFieldStyle(.roundedBorder)
+                            .autocapitalization(.none)
                     }
                     .padding(10)
                     .listRowSeparator(.hidden)
@@ -59,7 +61,9 @@ struct Login: View {
                                     if statuscode == 200 {
                                         // redirect to login page
                                         self.isPresenting = true
-                                        
+                                        UserStatus.userSatatus.role = success?.userRole
+                                        UserStatus.userSatatus.name = success?.userName
+                                        UserStatus.userSatatus.privateKey = success?.privateKey
                                         print("user authenticated successfully")
                                     } else {
                                         // login not successful
