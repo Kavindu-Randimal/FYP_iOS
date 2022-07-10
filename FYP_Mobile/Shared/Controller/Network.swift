@@ -9,37 +9,9 @@ import Foundation
 import SwiftUI
 import Combine
 
-class Network: ObservableObject {
-//    @Published var details: [foodDetails] = []
-//    @Published var user = [SignUpModel] ()
+class Network:ObservableObject {
     
-//    func getDetails(){
-//        guard let url = URL(string: "http://localhost:8080/api/accounts")else { fatalError("Missing URL") }
-//        let urlRequest = URLRequest(url: url)
-//
-//        let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-//            if let error = error {
-//                print("Request error: ", error)
-//                return
-//            }
-//            guard let response = response as? HTTPURLResponse else { return }
-//
-//            if response.statusCode == 200 {
-//                guard let data = data else { return }
-//                DispatchQueue.main.async {
-//                    do {
-//                        let decodedDetails = try JSONDecoder().decode([foodDetails].self, from: data)
-//                        self.details = decodedDetails
-//                    } catch let error {
-//                        print("Error decoding: ", error)
-//                    }
-//                }
-//            }
-//        }
-//        dataTask.resume()
-//    }
-    
-    //    MARK: - POST Data
+    //    MARK: - Add event
     
     func addEvent(parameters: [String:Any], completion: @escaping(Bool, Int) ->()){
         guard let url = URL( string: "http://localhost:8080/api/addEvent")else {fatalError("Missing Url")}
@@ -78,6 +50,8 @@ class Network: ObservableObject {
         dataTask.resume()
     }
     
+    
+//  MARK: - Create contract
     
     func createContract(parameters: [String:Any], completion: @escaping(TransactionReceipt?, Int) ->()){
         guard let url = URL(string: "http://localhost:8080/api/start") else {fatalError("Missing Url")}
@@ -230,22 +204,6 @@ class Network: ObservableObject {
             }else{
                 completion(nil, 500)
             }
-//            if response.statusCode == 200 {
-//                guard let data = data else {
-//                    completion(nil, 500)
-//                    return
-//                }
-//
-//                completion(SignUpModel, response.statusCode)
-////                do {
-////                    let decodedDetails = try JSONDecoder().decode(SignUpModel.self, from: data)
-////                    print(decodedDetails)
-////                    completion(true, response.statusCode)
-////                } catch let error {
-////                    print("Error decoding: ", error)
-////                    completion(false, 500)
-////                }
-//            }
         }
         dataTask.resume()
     }

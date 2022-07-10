@@ -21,7 +21,7 @@ struct SignUp: View {
     
     var body: some View {
 //        VStack{
-            NavigationView{
+//            NavigationView{
                 Form {
                     Text("AgrO")
                         .foregroundColor(Color("theme"))
@@ -100,10 +100,11 @@ struct SignUp: View {
                             .foregroundColor(Color("theme"))
                             .font(.system(size: 15))
                             .padding(.leading,34)
+//                            .navigationBarBackButtonHidden(true)
                     }
                 }
 //                .padding(-10)
-            }
+//            }
 //        }
     }
 }

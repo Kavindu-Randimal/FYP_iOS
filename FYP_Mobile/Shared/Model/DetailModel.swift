@@ -8,21 +8,21 @@
 import Foundation
 
 struct foodDetails :  Codable {
-    let eventId: Int
+    let eventId: Int?
     let userId : Int?
-    let firstName : String
+    let firstName : String?
     let lastName : String?
-    let userType : String?
+    let userType : Int?
     let foodName : String?
-    let stage : String?
+    let stage : Int?
     let date : String?
     let spec : String?
     let details : String?
     let certificationStatus : String?
-    let privateKey: String
-    let contractId: String
-    let gasLimit: Int64
-    let gasPrice: Int64
+    let privateKey: String?
+    let contractId: String?
+    let gasLimit: Int64?
+    let gasPrice: Int64?
 }
 
 struct startDetails : Codable {
@@ -79,5 +79,13 @@ struct cultivationModel : Codable{
     let contractId: String?
     let date : String?
     let farmerName: String?
-    let id: Int
+    let id: Int?
+    
+    init( _contractId: String? ) {
+        contractId = _contractId
+        contractName = ""
+        date = ""
+        farmerName = ""
+        id = 0
+    }
 }

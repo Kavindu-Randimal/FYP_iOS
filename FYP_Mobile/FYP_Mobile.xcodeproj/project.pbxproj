@@ -33,6 +33,8 @@
 		DFA53BD42874C76E008752AA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA53BD32874C76E008752AA /* Login.swift */; };
 		DFDEF22B287845E500176BDF /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEF22A287845E500176BDF /* WalletView.swift */; };
 		DFDEF27E2879BD9000176BDF /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEF27D2879BD8F00176BDF /* CreateView.swift */; };
+		DFDEF280287AD33100176BDF /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEF27F287AD33100176BDF /* EventView.swift */; };
+		DFDEF282287AE6AE00176BDF /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDEF281287AE6AE00176BDF /* EventDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		DFA53BD32874C76E008752AA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		DFDEF22A287845E500176BDF /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		DFDEF27D2879BD8F00176BDF /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		DFDEF27F287AD33100176BDF /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		DFDEF281287AE6AE00176BDF /* EventDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 				DFA53BD32874C76E008752AA /* Login.swift */,
 				DFDEF22A287845E500176BDF /* WalletView.swift */,
 				DFDEF27D2879BD8F00176BDF /* CreateView.swift */,
+				DFDEF27F287AD33100176BDF /* EventView.swift */,
+				DFDEF281287AE6AE00176BDF /* EventDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -272,6 +278,8 @@
 				DFDEF27E2879BD9000176BDF /* CreateView.swift in Sources */,
 				DFA53BD22874C5D2008752AA /* SignUp.swift in Sources */,
 				DF6173E8286C698800EEA3DB /* FYP_Mobile.xcdatamodeld in Sources */,
+				DFDEF282287AE6AE00176BDF /* EventDetails.swift in Sources */,
+				DFDEF280287AD33100176BDF /* EventView.swift in Sources */,
 				DF6173EE286C698800EEA3DB /* Persistence.swift in Sources */,
 				DF6173EA286C698800EEA3DB /* FYP_MobileApp.swift in Sources */,
 				DFDEF22B287845E500176BDF /* WalletView.swift in Sources */,

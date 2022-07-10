@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    
     @EnvironmentObject var network : Network
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
             VStack{
                 Text("AgrO")
                     .foregroundColor(Color("theme"))
@@ -26,7 +24,8 @@ struct HomeView: View {
                 Spacer()
                     .frame(height: 100)
                 VStack{
-                    NavigationLink(destination: CreateView(cultivationName: "")){
+                    NavigationLink(destination: CreateView(cultivationName: "")
+                        .environmentObject(network)){
                         Text("+ Create")
                             .frame(width: 170, height: 20)
                             .padding()
@@ -34,7 +33,8 @@ struct HomeView: View {
                             .foregroundColor(Color.white)
                             .cornerRadius(10)
                     }
-                    NavigationLink(destination: DetailView()){
+                    NavigationLink(destination: DetailView()
+                        .environmentObject(network)){
                         Text("View Details")
                             .frame(width: 170, height: 20)
                             .padding()
@@ -42,18 +42,20 @@ struct HomeView: View {
                             .foregroundColor(Color.white)
                             .cornerRadius(10)
                     }
-                    NavigationLink(destination: QRScanner()){
+                    NavigationLink(destination: QRScanner()
+                        .environmentObject(network)){
                         Text("Scan QR")
                             .frame(width: 170, height: 20)
                             .padding()
                             .background(Color("theme"))
                             .foregroundColor(Color.white)
                             .cornerRadius(10)
+                            .navigationBarBackButtonHidden(true)
                     }
                 }
             }
             .padding(.top, -150)
-        }
+//        }
 //        .padding(.top, -150)
     }
 }

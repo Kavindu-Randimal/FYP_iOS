@@ -11,11 +11,13 @@ struct CreateView: View {
     
     @EnvironmentObject var network : Network
     
-    @State var cultivationName : String
+    @State var cultivationName : String = ""
     @State var cultivationDate = Date()
     
+//    @Binding var createSuccessfull : Bool
+    
     var body: some View {
-        NavigationView {
+//        NavigationView {
             Form{
                 VStack{
                     Text("Cultivation Name")
@@ -65,7 +67,7 @@ struct CreateView: View {
                     }
                 }
             }
-        }
+//        }
     }
     
     func saveContractDetails(){
@@ -82,6 +84,7 @@ struct CreateView: View {
             network.createContract(parameters: parameters){(success, statuscode) in
                 if statuscode == 200 {
                     print(parameters)
+                    HomeView()
                 }
                 else {
                     print("create contract is failed")

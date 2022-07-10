@@ -28,8 +28,11 @@ struct FYP_MobileApp: App {
             //            SignUp( isPresenting: false)
             //                .environmentObject(network)
             //
-                                    Login(isPresenting: false)
-                                        .environmentObject(network)
+            NavigationView {
+                Login(isPresenting: false)
+                    .environmentObject(network)
+            }
+                                    
             //            SignupView(isPresenting: true)
             //                .environmentObject(network)
             
